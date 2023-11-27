@@ -1,3 +1,5 @@
+# UNDER CONSTRUCTION
+
 # How To Add Internationalisation to the NavBar (Menu) in Yii2 Basic (Bootstrap 5)
 
 Yii comes with internationalisation (**i18n**) "out of the box". There are instructions in the manual as to how to configure Yii to use i18n, but little information all in one place on how to fully integrate it into the bootstrap menu. This project tries to remedy that.
