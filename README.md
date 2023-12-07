@@ -254,7 +254,7 @@ In `/config/params.php` create an array named `languages` with the languages req
   'languages' => [
 //    'da' => 'Danske',
 //    'de' => 'Deutsche',
-//    'en' => 'English', // NOT REQUIRED the sourceLanguage (i.e. the default)
+//    'en' => 'English', // If you want just English
     'en-GB' => 'British English',
     'en-US' => 'American English',
     'es' => 'Español',

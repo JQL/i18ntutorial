@@ -7,11 +7,13 @@ return [
 // should be translated to. For example, ['zh-CN', 'de'].
   'languages' => [
 // to localise a particular language use the language code followed by the dialect in CAPS
-//    'en-GB',
+//    'en-GB',  // NOT REQUIRED the sourceLanguage (i.e. the default)
+//    'en' => 'English', // NOT REQUIRED the sourceLanguage (i.e. the default)
     'en-US', // USA English
     'es',
     'fr',
     'it',
+    'ja',
     'pt',
   ],
 //    'languages' => [

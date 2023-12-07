@@ -19,13 +19,12 @@ return [
   'languages' => [
 //    'da' => 'Danske',
 //    'de' => 'Deutsche',
-//    'en' => 'English', // NOT REQUIRED the sourceLanguage (i.e. the default)
     'en-GB' => 'British English',
     'en-US' => 'American English',
     'es' => 'Español',
     'fr' => 'Français',
     'it' => 'Italiano',
-//    'ja' => '日本の',  // Japanese with the word "Japanese" in Kanji
+    'ja' => '日本の', // Japanese with the word "Japanese" in Kanji
 //    'nl' => 'Nederlandse',
 //    'no' => 'Norsk',
 //    'pl' => 'Polski',
