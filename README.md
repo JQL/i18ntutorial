@@ -1,8 +1,8 @@
-# How to add a DropDown Language Picker (i18n) to the Menu
-
-## Adding Internationalisation to the NavBar Menu in Yii2
+# How To Add Internationalisation to the NavBar Menu in Yii2
 
 Yii comes with internationalisation (i18n) "out of the box". There are instructions in the manual as to how to configure Yii to use i18n, but little information all in one place on how to fully integrate it into the bootstrap menu. This document attempts to remedy that.
+
+<img src="https://visualaccounts.co.uk/images/screenshots/Screenshot_i18n_s.png" />
 
 The Github repository also contains the language flags, some country flags, a list of languages codes and their language names and a list of the languages Yii recognises "out of the box". A video will be posted on YouTube soon.
 
