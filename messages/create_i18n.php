@@ -5,6 +5,7 @@ return [
   'sourcePath' => __DIR__ . DIRECTORY_SEPARATOR . '..',
   // array, required, list of language codes that the extracted messages
 // should be translated to. For example, ['zh-CN', 'de'].
+//  'languages' => require(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'languages.php'),
   'languages' => [
 // to localise a particular language use the language code followed by the dialect in CAPS
 //    'en-GB',  // NOT REQUIRED the sourceLanguage (i.e. the default)

@@ -16,21 +16,22 @@ return [
    *            e.g.
    *            'ja' => '日本の',
    */
-  'languages' => [
-//    'da' => 'Danske',
-//    'de' => 'Deutsche',
-    'en-GB' => 'British English',
-    'en-US' => 'American English',
-    'es' => 'Español',
-    'fr' => 'Français',
-    'it' => 'Italiano',
-    'ja' => '日本の', // Japanese with the word "Japanese" in Kanji
-//    'nl' => 'Nederlandse',
-//    'no' => 'Norsk',
-//    'pl' => 'Polski',
-    'pt' => 'Português',
-//    'ru' => 'Русский',
-//    'sw' => 'Svensk',
-//    'zh' => '中国的',
-  ],
+  'languages' => require(__DIR__ . DIRECTORY_SEPARATOR . 'languages.php'),
+//  'languages' => [
+////    'da' => 'Danske',
+////    'de' => 'Deutsche',
+//    'en-GB' => 'British English',
+//    'en-US' => 'American English',
+//    'es' => 'Español',
+//    'fr' => 'Français',
+//    'it' => 'Italiano',
+//    'ja' => '日本の', // Japanese with the word "Japanese" in Kanji
+////    'nl' => 'Nederlandse',
+////    'no' => 'Norsk',
+////    'pl' => 'Polski',
+//    'pt' => 'Português',
+////    'ru' => 'Русский',
+////    'sw' => 'Svensk',
+////    'zh' => '中国的',
+//  ],
 ];
