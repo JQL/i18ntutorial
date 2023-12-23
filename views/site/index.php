@@ -11,6 +11,7 @@ $this->title = Yii::$app->name;
 
     <p><a class="btn btn-lg btn-success" href="https://www.yiiframework.com">Get started with Yii</a></p>
     <p class="lead"><?= Yii::$app->formatter->asDate('2023-11-14', 'long') ?></p>
+    <p>Preferred Language: <?= Yii::$app->request->getPreferredLanguage() ?></p>
   </div>
 
   <div class="body-content">

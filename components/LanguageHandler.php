@@ -45,7 +45,8 @@ class LanguageHandler extends \yii\base\Behavior
     else
     {
       //	Use the browser language
-      \Yii::$app->language = str_replace('_', '-', HTML::encode(locale_accept_from_http($_SERVER['HTTP_ACCEPT_LANGUAGE'])));
+//      \Yii::$app->language = str_replace('_', '-', HTML::encode(locale_accept_from_http($_SERVER['HTTP_ACCEPT_LANGUAGE'])));
+      \Yii::$app->language = str_replace('_', '-', \Yii::$app->request->getPreferredLanguage());
     }
   }
 }
