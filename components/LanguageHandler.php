@@ -15,7 +15,8 @@
 namespace app\components;
 
 use Yii;
-use yii\helpers\Html;
+
+//use yii\helpers\Html;
 
 /**
  * LanguageHandler //add more information about this file
@@ -23,11 +24,6 @@ use yii\helpers\Html;
  * @author John Lavelle
  * @since 1.0 // Update version number
  */
-
-namespace app\components;
-
-//use yii\helpers\Html;
-
 class LanguageHandler extends \yii\base\Behavior
 {
 
