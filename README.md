@@ -366,7 +366,9 @@ class LanguageHandler extends \yii\base\Behavior
       \Yii::$app->language = \Yii::$app->request->getPreferredLanguage();
     }
   }
-}```
+}
+
+```
 
 ### 4. Call `LanguageHandler.php` from `/config/web.php`
 
