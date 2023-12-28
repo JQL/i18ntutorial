@@ -677,7 +677,7 @@ That's it! Enjoy...
 
 For further reading and information see:
 
-[i18ntutorial on Github](https://github.com/JQL/i18ntutorial)
+[![i18ntutorial on Github](https://github.com/JQL/i18ntutorial)](https://github.com/JQL/i18ntutorial)
 
 [Yii2 Internationalization Tutorial](https://www.yiiframework.com/doc/guide/2.0/en/tutorial-i18n)
 
