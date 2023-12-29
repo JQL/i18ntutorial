@@ -53,53 +53,59 @@ The created file should look something like this after editing the languages you
 <?php
 
 return [
-  // string, required, root directory of all source files
+// string, required, root directory of all source files
   'sourcePath' => __DIR__ . DIRECTORY_SEPARATOR . '..',
-  // array, required, list of language codes (in alphabetical order) that the extracted messages
-  // should be translated to. For example, ['zh-CN', 'de'].
-  'languages' => [
-    // to localise a particular language use the language code followed by the dialect in CAPS
-    'en-US',  // USA English
+// array, required, list of language codes that the extracted messages
+// should be translated to. For example, ['zh-CN', 'de'].
+// The languages array is in `/config/languages.php`
+// We need just the Array Keys for this file but, after running `./yii message ./messages/create_i18n.php`
+// Remove the *Default Language folder* (usually `en` or `en-GB`) from the `/messages/` directory
+ 'languages' => array_keys(require(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'languages.php')),
+/*  'languages' => [
+// to localise a particular language use the language code followed by the dialect in CAPS
+//    'en-GB',  // NOT REQUIRED the sourceLanguage (i.e. the default)
+//    'en' => 'English', // NOT REQUIRED the sourceLanguage (i.e. the default)
+    'en-US', // USA English
     'es',
     'fr',
     'it',
+    'ja',
     'pt',
-  ],
-  /* 'languages' => [
-    'af', 'ar', 'az', 'be', 'bg', 'bs', 'ca', 'cs', 'da', 'de', 'el', 'es', 'et', 'fa', 'fi', 'fr', 'he', 'hi',
-    'pt-BR', 'ro', 'hr', 'hu', 'hy', 'id', 'it', 'ja', 'ka', 'kk', 'ko', 'kz', 'lt', 'lv', 'ms', 'nb-NO', 'nl',
-    'pl', 'pt', 'ru', 'sk', 'sl', 'sr', 'sr-Latn', 'sv', 'tg', 'th', 'tr', 'uk', 'uz', 'uz-Cy', 'vi', 'zh-CN',
-    'zh-TW'
-    ], */
-  // string, the name of the function for translating messages.
-  // Defaults to 'Yii::t'. This is used as a mark to find the messages to be
-  // translated. You may use a string for single function name or an array for
-  // multiple function names.
+  ], */
+//    'languages' => [
+//        'af', 'ar', 'az', 'be', 'bg', 'bs', 'ca', 'cs', 'da', 'de', 'el', 'es', 'et', 'fa', 'fi', 'fr', 'he', 'hi',
+//        'pt-BR', 'ro', 'hr', 'hu', 'hy', 'id', 'it', 'ja', 'ka', 'kk', 'ko', 'kz', 'lt', 'lv', 'ms', 'nb-NO', 'nl',
+//        'pl', 'pt', 'ru', 'sk', 'sl', 'sr', 'sr-Latn', 'sv', 'tg', 'th', 'tr', 'uk', 'uz', 'uz-Cy', 'vi', 'zh-CN',
+//        'zh-TW'
+//    ],
+// string, the name of the function for translating messages.
+// Defaults to 'Yii::t'. This is used as a mark to find the messages to be
+// translated. You may use a string for single function name or an array for
+// multiple function names.
   'translator' => ['\Yii::t', 'Yii::t'],
   // boolean, whether to sort messages by keys when merging new messages
-  // with the existing ones. Defaults to false, which means the new (untranslated)
-  // messages will be separated from the old (translated) ones.
+// with the existing ones. Defaults to false, which means the new (untranslated)
+// messages will be separated from the old (translated) ones.
   'sort' => false,
   // boolean, whether to remove messages that no longer appear in the source code.
-  // Defaults to false, which means these messages will NOT be removed.
+// Defaults to false, which means these messages will NOT be removed.
   'removeUnused' => false,
   // boolean, whether to mark messages that no longer appear in the source code.
-  // Defaults to true, which means each of these messages will be enclosed with a pair of '@@' marks.
+// Defaults to true, which means each of these messages will be enclosed with a pair of '@@' marks.
   'markUnused' => true,
   // array, list of patterns that specify which files (not directories) should be processed.
-  // If empty or not set, all files will be processed.
-  // See helpers/FileHelper::findFiles() for pattern matching rules.
-  // If a file/directory matches both a pattern in "only" and "except", it will NOT be processed.
+// If empty or not set, all files will be processed.
+// See helpers/FileHelper::findFiles() for pattern matching rules.
+// If a file/directory matches both a pattern in "only" and "except", it will NOT be processed.
   'only' => ['*.php'],
   // array, list of patterns that specify which files/directories should NOT be processed.
-  // If empty or not set, all files/directories will be processed.
-  // See helpers/FileHelper::findFiles() for pattern matching rules.
-  // If a file/directory matches both a pattern in "only" and "except", it will NOT be processed.
+// If empty or not set, all files/directories will be processed.
+// See helpers/FileHelper::findFiles() for pattern matching rules.
+// If a file/directory matches both a pattern in "only" and "except", it will NOT be processed.
   'except' => [
     '.*',
     '/.*',
     '/messages',
-    '/migrations',
     '/tests',
     '/runtime',
     '/vendor',
@@ -147,6 +153,7 @@ return [
     'overwrite' => true,
    */
 ];
+
 ```
 
 ## Edit the `/config/web.php` file
