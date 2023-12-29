@@ -4,7 +4,10 @@ return [
 // string, required, root directory of all source files
   'sourcePath' => __DIR__ . DIRECTORY_SEPARATOR . '..',
   // array, required, list of language codes that the extracted messages
-// should be translated to. For example, ['zh-CN', 'de'].
+  // should be translated to. For example, ['zh-CN', 'de'].
+  // The languages array is in `/config/languages.php`
+  // We need just the Array Keys for this file but, after running `./yii message ./messages/create_i18n.php`
+  // Remove the *Default Language folder* (usually `en` or `en-GB`) from the `/messages/` directory
  'languages' => array_keys(require(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'languages.php')),
   
 /*  'languages' => [
